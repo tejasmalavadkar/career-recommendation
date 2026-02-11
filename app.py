@@ -2,9 +2,13 @@ import streamlit as st
 import pickle
 import numpy as np
 
-st.set_page_config(page_title="AI Career Advisor", page_icon="🚀")
+# =========================
+# PAGE CONFIG
+# =========================
+st.set_page_config(page_title="Smart Career Advisor", page_icon="🚀")
 
 st.title("🚀 Smart Career Advisor")
+st.write("Answer the questions one by one")
 
 # =========================
 # LOAD ML MODEL
@@ -13,98 +17,69 @@ with open("career_ml_model.pkl", "rb") as f:
     model, label_encoder = pickle.load(f)
 
 # =========================
-# MODE SELECTION
+# QUESTION LIST (MIXED)
 # =========================
-mode = st.selectbox(
-    "Choose Mode",
-    ["Mixed Questions (All Domains)", "Category Based Questions"]
-)
-
-# =========================
-# QUESTION BANK
-# =========================
-question_bank = {
-    "Software Development": [
-        "Do you enjoy building applications?",
-        "Do you like solving coding problems?",
-        "Do you prefer backend or frontend development?"
-    ],
-    "Data Science": [
-        "Do you enjoy analyzing data?",
-        "Do you like statistics and math?",
-        "Do you enjoy finding patterns in data?"
-    ],
-    "Cyber Security": [
-        "Are you interested in ethical hacking?",
-        "Do you enjoy securing systems?",
-        "Do you like networking and firewalls?"
-    ],
-    "UI/UX Design": [
-        "Do you enjoy designing interfaces?",
-        "Do you like creativity and visual design?",
-        "Do you enjoy improving user experience?"
-    ]
-}
+questions = [
+    "Do you enjoy building applications?",
+    "Do you like analyzing data?",
+    "Are you interested in cyber security?",
+    "Do you enjoy designing user interfaces?",
+    "Do you like solving programming problems?",
+    "Do you enjoy statistics and math?",
+    "Are you interested in ethical hacking?",
+    "Do you like creativity and visual design?"
+]
 
 options = ["Strongly Yes", "Yes", "No", "Strongly No"]
 
 # =========================
-# MODE 1 → MIXED QUESTIONS
+# SESSION STATE INIT
 # =========================
-if mode == "Mixed Questions (All Domains)":
-
-    st.subheader("Answer Mixed Domain Questions")
-
-    mixed_questions = []
-    for domain in question_bank:
-        mixed_questions.extend(question_bank[domain])
-
-    user_answers = []
-
-    for i, q in enumerate(mixed_questions):
-        answer = st.radio(q, options, key=i)
-        user_answers.append(options.index(answer))
-
-    if st.button("Find My Career"):
-
-        A = user_answers.count(0)
-        B = user_answers.count(1)
-        C = user_answers.count(2)
-        D = user_answers.count(3)
-
-        X_input = np.array([[A, B, C, D]])
-
-        prediction = model.predict(X_input)
-        career = label_encoder.inverse_transform(prediction)
-
-        st.success(f"🎯 Recommended Career: {career[0]}")
-        st.balloons()
-
+if "question_number" not in st.session_state:
+    st.session_state.question_number = 0
+    st.session_state.answers = []
 
 # =========================
-# MODE 2 → CATEGORY BASED
+# SHOW CURRENT QUESTION
+# =========================
+if st.session_state.question_number < len(questions):
+
+    q_no = st.session_state.question_number
+    st.subheader(f"Question {q_no + 1}")
+
+    answer = st.radio(
+        questions[q_no],
+        options,
+        key=q_no
+    )
+
+    if st.button("Submit & Next"):
+
+        st.session_state.answers.append(options.index(answer))
+        st.session_state.question_number += 1
+        st.rerun()
+
+# =========================
+# SHOW RESULT AFTER LAST QUESTION
 # =========================
 else:
 
-    category = st.selectbox("Select Category", list(question_bank.keys()))
-    st.subheader(f"{category} Assessment")
+    st.subheader("Calculating Result...")
 
-    questions = question_bank[category]
-    score = 0
+    A = st.session_state.answers.count(0)
+    B = st.session_state.answers.count(1)
+    C = st.session_state.answers.count(2)
+    D = st.session_state.answers.count(3)
 
-    for i, q in enumerate(questions):
-        answer = st.radio(q, options, key=i)
-        if answer == "Strongly Yes":
-            score += 2
-        elif answer == "Yes":
-            score += 1
+    X_input = np.array([[A, B, C, D]])
 
-    if st.button("Check My Rating"):
+    prediction = model.predict(X_input)
+    career = label_encoder.inverse_transform(prediction)
 
-        if score >= 5:
-            st.success("🌟 Excellent Fit! You are highly suitable for this domain.")
-        elif score >= 3:
-            st.warning("👍 Moderate Fit. You can improve and grow in this domain.")
-        else:
-            st.error("⚠️ Needs Improvement. Consider exploring other domains.")
+    st.success(f"🎯 Recommended Career: {career[0]}")
+    st.balloons()
 
+    if st.button("Restart Quiz"):
+        st.session_state.question_number = 0
+        st.session_state.answers = []
+        st.rerun()
