@@ -1,0 +1,161 @@
+,QNo,Career,Answer_A,Answer_B,Answer_C,Answer_D
+0,0,Software Engineer,1,0,0,0
+1,0,Full Stack Developer,1,0,0,0
+2,0,Data Scientist,0,1,0,0
+3,0,Data Engineer,0,1,0,0
+4,0,Cybersecurity Analyst,0,0,1,0
+5,0,System Administrator,0,0,1,0
+6,0,Cybersecurity Analyst,0,0,0,1
+7,0,System Administrator,0,0,0,1
+8,1,Full Stack Developer,1,0,0,0
+9,1,Software Engineer,1,0,0,0
+10,1,AI/ML Engineer,0,1,0,0
+11,1,Data Scientist,0,1,0,0
+12,1,Cybersecurity Analyst,0,0,1,0
+13,1,Blockchain Developer,0,0,1,0
+14,1,Cybersecurity Analyst,0,0,0,1
+15,1,Blockchain Developer,0,0,0,1
+16,2,Software Engineer,1,0,0,0
+17,2,Full Stack Developer,1,0,0,0
+18,2,Data Engineer,0,1,0,0
+19,2,Database Administrator,0,1,0,0
+20,2,Cybersecurity Analyst,0,0,1,0
+21,2,DevOps Engineer,0,0,1,0
+22,2,Cybersecurity Analyst,0,0,0,1
+23,2,DevOps Engineer,0,0,0,1
+24,3,AI/ML Engineer,1,0,0,0
+25,3,Software Engineer,1,0,0,0
+26,3,Data Scientist,0,1,0,0
+27,3,Data Engineer,0,1,0,0
+28,3,Cybersecurity Analyst,0,0,1,0
+29,3,Blockchain Developer,0,0,1,0
+30,3,Cybersecurity Analyst,0,0,0,1
+31,3,Blockchain Developer,0,0,0,1
+32,4,Full Stack Developer,1,0,0,0
+33,4,Mobile App Developer,1,0,0,0
+34,4,Data Scientist,0,1,0,0
+35,4,Blockchain Developer,0,1,0,0
+36,4,Cloud Engineer,0,0,1,0
+37,4,DevOps Engineer,0,0,1,0
+38,4,Cloud Engineer,0,0,0,1
+39,4,DevOps Engineer,0,0,0,1
+40,5,Software Engineer,1,0,0,0
+41,5,AI/ML Engineer,1,0,0,0
+42,5,Data Engineer,0,1,0,0
+43,5,Data Scientist,0,1,0,0
+44,5,Cybersecurity Analyst,0,0,1,0
+45,5,System Administrator,0,0,1,0
+46,5,Cybersecurity Analyst,0,0,0,1
+47,5,System Administrator,0,0,0,1
+48,6,Full Stack Developer,1,0,0,0
+49,6,Cloud Engineer,1,0,0,0
+50,6,Data Scientist,0,1,0,0
+51,6,AI/ML Engineer,0,1,0,0
+52,6,Cybersecurity Analyst,0,0,1,0
+53,6,Blockchain Developer,0,0,1,0
+54,6,Cybersecurity Analyst,0,0,0,1
+55,6,Blockchain Developer,0,0,0,1
+56,7,Software Engineer,1,0,0,0
+57,7,Full Stack Developer,1,0,0,0
+58,7,AI/ML Engineer,0,1,0,0
+59,7,Data Scientist,0,1,0,0
+60,7,Cybersecurity Analyst,0,0,1,0
+61,7,Blockchain Developer,0,0,1,0
+62,7,Cybersecurity Analyst,0,0,0,1
+63,7,Blockchain Developer,0,0,0,1
+64,8,Full Stack Developer,1,0,0,0
+65,8,Mobile App Developer,1,0,0,0
+66,8,Data Scientist,0,1,0,0
+67,8,AI/ML Engineer,0,1,0,0
+68,8,Cybersecurity Analyst,0,0,1,0
+69,8,System Administrator,0,0,1,0
+70,8,Cybersecurity Analyst,0,0,0,1
+71,8,System Administrator,0,0,0,1
+72,9,Software Engineer,1,0,0,0
+73,9,DevOps Engineer,1,0,0,0
+74,9,AI/ML Engineer,0,1,0,0
+75,9,Data Scientist,0,1,0,0
+76,9,Cybersecurity Analyst,0,0,1,0
+77,9,System Administrator,0,0,1,0
+78,9,Cybersecurity Analyst,0,0,0,1
+79,9,System Administrator,0,0,0,1
+80,10,Full Stack Developer,1,0,0,0
+81,10,Cloud Engineer,1,0,0,0
+82,10,AI/ML Engineer,0,1,0,0
+83,10,Data Scientist,0,1,0,0
+84,10,Blockchain Developer,0,0,1,0
+85,10,Cybersecurity Analyst,0,0,1,0
+86,10,Blockchain Developer,0,0,0,1
+87,10,Cybersecurity Analyst,0,0,0,1
+88,11,Full Stack Developer,1,0,0,0
+89,11,Mobile App Developer,1,0,0,0
+90,11,AI/ML Engineer,0,1,0,0
+91,11,Data Scientist,0,1,0,0
+92,11,Cloud Engineer,0,0,1,0
+93,11,DevOps Engineer,0,0,1,0
+94,11,Cloud Engineer,0,0,0,1
+95,11,DevOps Engineer,0,0,0,1
+96,12,Software Engineer,1,0,0,0
+97,12,Full Stack Developer,1,0,0,0
+98,12,Data Scientist,0,1,0,0
+99,12,Data Engineer,0,1,0,0
+100,12,Cybersecurity Analyst,0,0,1,0
+101,12,Blockchain Developer,0,0,1,0
+102,12,Cybersecurity Analyst,0,0,0,1
+103,12,Blockchain Developer,0,0,0,1
+104,13,AI/ML Engineer,1,0,0,0
+105,13,Data Scientist,1,0,0,0
+106,13,Cloud Engineer,0,1,0,0
+107,13,DevOps Engineer,0,1,0,0
+108,13,Cybersecurity Analyst,0,0,1,0
+109,13,Blockchain Developer,0,0,1,0
+110,13,Cybersecurity Analyst,0,0,0,1
+111,13,Blockchain Developer,0,0,0,1
+112,14,Software Engineer,1,0,0,0
+113,14,Full Stack Developer,1,0,0,0
+114,14,Data Engineer,0,1,0,0
+115,14,System Administrator,0,1,0,0
+116,14,Cybersecurity Analyst,0,0,1,0
+117,14,Blockchain Developer,0,0,1,0
+118,14,Cybersecurity Analyst,0,0,0,1
+119,14,Blockchain Developer,0,0,0,1
+120,15,Software Engineer,1,0,0,0
+121,15,Full Stack Developer,1,0,0,0
+122,15,Data Scientist,0,1,0,0
+123,15,Data Engineer,0,1,0,0
+124,15,Cybersecurity Analyst,0,0,1,0
+125,15,Blockchain Developer,0,0,1,0
+126,15,Cybersecurity Analyst,0,0,0,1
+127,15,Blockchain Developer,0,0,0,1
+128,16,Full Stack Developer,1,0,0,0
+129,16,Software Engineer,1,0,0,0
+130,16,AI/ML Engineer,0,1,0,0
+131,16,Data Scientist,0,1,0,0
+132,16,Cybersecurity Analyst,0,0,1,0
+133,16,Blockchain Developer,0,0,1,0
+134,16,Cybersecurity Analyst,0,0,0,1
+135,16,Blockchain Developer,0,0,0,1
+136,17,Full Stack Developer,1,0,0,0
+137,17,Software Engineer,1,0,0,0
+138,17,AI/ML Engineer,0,1,0,0
+139,17,Data Scientist,0,1,0,0
+140,17,Blockchain Developer,0,0,1,0
+141,17,Cybersecurity Analyst,0,0,1,0
+142,17,Blockchain Developer,0,0,0,1
+143,17,Cybersecurity Analyst,0,0,0,1
+144,18,Software Engineer,1,0,0,0
+145,18,Full Stack Developer,1,0,0,0
+146,18,AI/ML Engineer,0,1,0,0
+147,18,Data Scientist,0,1,0,0
+148,18,Cybersecurity Analyst,0,0,1,0
+149,18,System Administrator,0,0,1,0
+150,18,Cybersecurity Analyst,0,0,0,1
+151,18,System Administrator,0,0,0,1
+152,19,Software Engineer,1,0,0,0
+153,19,Full Stack Developer,1,0,0,0
+154,19,Data Scientist,0,1,0,0
+155,19,Data Engineer,0,1,0,0
+156,19,Cybersecurity Analyst,0,0,1,0
+157,19,Blockchain Developer,0,0,1,0
+158,19,Cybersecurity Analyst,0,0,0,1
+159,19,Blockchain Developer,0,0,0,1
